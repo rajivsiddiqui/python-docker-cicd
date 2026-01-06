@@ -5,7 +5,7 @@ import requests
 
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
-SLACK_WEBHOOK = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK = "my-slack-url"
 
 def run_cmd(cmd):
     subprocess.check_call(cmd, shell=True)
@@ -32,7 +32,7 @@ def email_notify(msg):
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender, "gvndpezcjsquysqb")
+        server.login(sender, "aaaa")
         server.send_message(email)
 
 if __name__ == "__main__":
