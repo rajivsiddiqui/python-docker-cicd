@@ -5,7 +5,7 @@ import requests
 
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
-SLACK_WEBHOOK = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK = "https://hooks.slack.com/services/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"
 
 def run_cmd(cmd):
     subprocess.check_call(cmd, shell=True)
