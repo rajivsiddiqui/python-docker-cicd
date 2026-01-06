@@ -32,7 +32,7 @@ def email_notify(msg):
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender, "qfatwytapnswwgju")
+        server.login(sender, "gvndpezcjsquysqb")
         server.send_message(email)
 
 if __name__ == "__main__":
