@@ -7,7 +7,7 @@ import os
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
 #SLACK_WEBHOOK = "my-slack-url"
-SLACK_WEBHOOK = os.getenv("SLACK_WEBHOOK")
+SLACK_WEBHOOK = os.getenv("slack_2026")
 
 def run_cmd(cmd):
     subprocess.check_call(cmd, shell=True)
@@ -34,7 +34,7 @@ def email_notify(msg):
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender, "aaaa")
+        server.login(sender, "dzzyizhdemixsswd")
         server.send_message(email)
 
 if __name__ == "__main__":
@@ -42,8 +42,8 @@ if __name__ == "__main__":
         docker_build_push()
         docker_deploy()
         slack_notify("✅ Docker App Deployed Successfully")
-        #email_notify("Pipeline SUCCESS: App deployed")
+        email_notify("Pipeline SUCCESS: App deployed")
     except Exception as e:
         slack_notify(f"❌ Pipeline Failed: {e}")
-        #email_notify(f"Pipeline FAILED: {e}")
+        email_notify(f"Pipeline FAILED: {e}")
         raise
