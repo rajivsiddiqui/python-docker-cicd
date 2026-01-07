@@ -41,7 +41,6 @@ if __name__ == "__main__":
     try:
         docker_build_push()
         docker_deploy()
-        print (SLACK_WEBHOOK)
         slack_notify("✅ Docker App Deployed Successfully")
         #email_notify("Pipeline SUCCESS: App deployed")
     except Exception as e:
