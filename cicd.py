@@ -2,6 +2,7 @@ import subprocess
 import smtplib
 from email.mime.text import MIMEText
 import requests
+import os
 
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
