@@ -34,7 +34,7 @@ def email_notify(msg):
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender, "dzzyizhdemixsswd")
+        server.login(sender, "aaaaa")
         server.send_message(email)
 
 if __name__ == "__main__":
