@@ -7,7 +7,7 @@ import os
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
 #SLACK_WEBHOOK = "my-slack-url"
-SLACK_WEBHOOK = os.getenv("SLACK")
+SLACK_WEBHOOK = os.getenv("SLACK_WEBHOOK")
 
 def run_cmd(cmd):
     subprocess.check_call(cmd, shell=True)
