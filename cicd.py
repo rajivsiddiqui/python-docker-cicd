@@ -44,5 +44,5 @@ if __name__ == "__main__":
         //email_notify("Pipeline SUCCESS: App deployed")
     except Exception as e:
         slack_notify(f"❌ Pipeline Failed: {e}")
-        email_notify(f"Pipeline FAILED: {e}")
+        //email_notify(f"Pipeline FAILED: {e}")
         raise
