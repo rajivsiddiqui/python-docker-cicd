@@ -7,7 +7,7 @@ import os
 IMAGE = "devopssteps/node-demo:latest"
 CONTAINER = "node-demo"
 #SLACK_WEBHOOK = "my-slack-url"
-SLACK_WEBHOOK = os.getenv("slack-2026")
+SLACK_WEBHOOK = os.getenv("SLACK_WEBHOOK")
 
 def run_cmd(cmd):
     subprocess.check_call(cmd, shell=True)
@@ -41,6 +41,7 @@ if __name__ == "__main__":
     try:
         docker_build_push()
         docker_deploy()
+        print (SLACK_WEBHOOK)
         slack_notify("✅ Docker App Deployed Successfully")
         #email_notify("Pipeline SUCCESS: App deployed")
     except Exception as e:
